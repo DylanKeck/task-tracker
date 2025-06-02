@@ -1,0 +1,24 @@
+body {
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-size: 50px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+#task-list li button {
+    margin-left: 8px;
+}
+li {
+    list-style-type: none;
+    font-size: 20px;
+}
+label, input {
+    font-size: 18px;
+}
