@@ -1,16 +1,11 @@
 body {
-    background-color: midnightblue;
-    color: white;
-    text-align: center;
+    background-color: lightgray;
 }
 h1 {
     font-size: 50px;
 }
 
-.completed {
-    text-decoration: line-through;
-    color: lightgray;
-}
+
 
 #task-list li button {
     margin-left: 8px;
@@ -21,4 +16,40 @@ li {
 }
 label, input {
     font-size: 18px;
+}
+.past {
+    color: red;
+}
+.completed {
+    text-decoration: line-through;
+    color: lightgray;
+}
+#container {
+    text-align: center;
+    margin: 7rem;
+    background-color: black;
+    color: white;
+}
+.high {
+    border-left: 6px solid red;
+}
+.medium {
+    border-left: 6px solid yellow;
+}
+.low {
+    border-left: 6px solid green;
+}
+#filter-list {
+    height: 100%;
+    width: 20em;
+    padding: 1rem;
+    background-color: white;
+}
+.filter {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.items {
+    padding: 5em;
 }
