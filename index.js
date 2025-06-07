@@ -91,7 +91,7 @@ function loadTasks() {
 function createDeleteButton() {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.className = "delete-button";
+    deleteButton.className = "px-3 py-2 ml-2 mb-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800";
     deleteButton.addEventListener("click", (e) => {
         e.target.parentElement.remove();
         saveTasks();
@@ -101,7 +101,7 @@ function createDeleteButton() {
 function completeTask () {
     const completeButton = document.createElement("button");
     completeButton.textContent = "Complete";
-    completeButton.className = "complete-button";
+    completeButton.className = "ml-2 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800";
     completeButton.type = "button";
     completeButton.addEventListener("click", (e) => {
         const listItem = e.target.parentElement;
@@ -117,7 +117,7 @@ function pastDue (listItem) {
         due: listItem.getAttribute("data-task-date"),
     }
     if (dates.today > dates.due) {
-        listItem.classList.add("past")
+        listItem.classList.add("text-red-500")
     }
 }
 

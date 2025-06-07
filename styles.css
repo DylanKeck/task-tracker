@@ -1,35 +1,106 @@
-body {
-    background-color: lightgray;
-}
-h1 {
-    font-size: 50px;
-}
+@import "tailwindcss";
 
 
 
-#task-list li button {
-    margin-left: 8px;
-}
-li {
-    list-style-type: none;
-    font-size: 20px;
-}
-label, input {
-    font-size: 18px;
-}
-.past {
-    color: red;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {*/
+/*    background-color: lightgray;*/
+/*}*/
+/*h1 {*/
+/*    font-size: 50px;*/
+/*}*/
+
+
+
+/*#task-list li button {*/
+/*    margin-left: 8px;*/
+/*}*/
+/*li {*/
+/*    list-style-type: none;*/
+/*    font-size: 20px;*/
+/*}*/
+/*label, input {*/
+/*    font-size: 18px;*/
+/*}*/
+/*.past {*/
+/*    color: red;*/
+/*}*/
 .completed {
     text-decoration: line-through;
     color: lightgray;
 }
-#container {
-    text-align: center;
-    margin: 7rem;
-    background-color: black;
-    color: white;
-}
+/*#container {*/
+/*    text-align: center;*/
+/*    margin: 7rem;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+/*.high {*/
+/*    border-left: 6px solid red;*/
+/*}*/
+/*.medium {*/
+/*    border-left: 6px solid yellow;*/
+/*}*/
+/*.low {*/
+/*    border-left: 6px solid green;*/
+/*}*/
+/*#filter-list {*/
+/*    height: 100%;*/
+/*    width: 20em;*/
+/*    padding: 1rem;*/
+/*    background-color: white;*/
+/*}*/
+/*.filter {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    margin-bottom: 1em;*/
+/*}*/
+/*.items {*/
+/*    padding: 5em;*/
+/*}*/
+/*h1 {*/
+/*    font-size: 50px;*/
+/*}*/
+
+
+
+/*#task-list li button {*/
+/*    margin-left: 8px;*/
+/*}*/
+/*li {*/
+/*    list-style-type: none;*/
+/*    font-size: 20px;*/
+/*}*/
+/*label, input {*/
+/*    font-size: 18px;*/
+/*}*/
+/*.past {*/
+/*    color: red;*/
+/*}*/
+/*.completed {*/
+/*    text-decoration: line-through;*/
+/*    color: lightgray;*/
+/*}*/
+/*#container {*/
+/*    display: flex;*/
+/*    text-align: center;*/
+/*    margin: 7rem;*/
+/*    margin: 7rem auto;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
 .high {
     border-left: 6px solid red;
 }
@@ -39,17 +110,75 @@ label, input {
 .low {
     border-left: 6px solid green;
 }
-#filter-list {
-    height: 100%;
-    width: 20em;
-    padding: 1rem;
-    background-color: white;
-}
-.filter {
-    display: block;
-    width: 100%;
-    margin-bottom: 1em;
-}
-.items {
-    padding: 5em;
-}
+/*#filter-list {*/
+/*    height: 100%;*/
+/*    height: 100vh;*/
+/*    width: 20em;*/
+/*    flex-shrink: 0;*/
+/*    padding: 1rem;*/
+/*    background-color: white;*/
+/*}*/
+/*.filter {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    margin-bottom: 1em;*/
+/*}*/
+/*.items {*/
+/*    padding: 5em;*/
+/*    flex: 1;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
+/*#task-list li button {*/
+/*    margin-left: 8px;*/
+/*}*/
+/*li {*/
+/*    list-style-type: none;*/
+/*    font-size: 20px;*/
+/*}*/
+/*label, input {*/
+/*    font-size: 18px;*/
+/*}*/
+/*.past {*/
+/*    color: red;*/
+/*}*/
+/*.completed {*/
+/*    text-decoration: line-through;*/
+/*    color: lightgray;*/
+/*}*/
+/*#container {*/
+/*    text-align: center;*/
+/*    margin: 7rem;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    !* Ensure children using 100% height span the full viewport *!*/
+/*    min-height: 100vh;*/
+/*}*/
+/*.high {*/
+/*    border-left: 6px solid red;*/
+/*}*/
+/*.medium {*/
+/*    border-left: 6px solid yellow;*/
+/*}*/
+/*.low {*/
+/*    border-left: 6px solid green;*/
+/*}*/
+/*#filter-list {*/
+/*    height: 100%;*/
+/*    !* Occupy the full height of the container *!*/
+/*    min-height: 100vh;*/
+/*    width: 20em;*/
+/*    padding: 1rem;*/
+/*    background-color: white;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+/*.filter {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    margin-bottom: 1em;*/
+/*}*/
+/*.items {*/
+/*    padding: 5em;*/
+/*}*/
