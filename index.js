@@ -91,7 +91,7 @@ function loadTasks() {
 function createDeleteButton() {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.className = "px-3 py-2 ml-2 mb-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800";
+    deleteButton.className = "px-5 py-1 ml-2 mb-2 text-sm font-medium text-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800";
     deleteButton.addEventListener("click", (e) => {
         e.target.parentElement.remove();
         saveTasks();
@@ -101,7 +101,7 @@ function createDeleteButton() {
 function completeTask () {
     const completeButton = document.createElement("button");
     completeButton.textContent = "Complete";
-    completeButton.className = "ml-2 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800";
+    completeButton.className = "ml-4 px-3 py-1 text-sm font-medium text-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800";
     completeButton.type = "button";
     completeButton.addEventListener("click", (e) => {
         const listItem = e.target.parentElement;
@@ -136,6 +136,8 @@ function filterTasks(filter) {
         const today =  new Date().toISOString().split("T")[0];
 
         let shouldShow = true
+        // task.classList.toggle("hidden", !shouldShow);
+
 
 
         if (filter === "high" && priority !== "high") shouldShow = false;
@@ -146,3 +148,9 @@ function filterTasks(filter) {
         task.style.display = shouldShow ? "list-item" : "none";
     })
 }
+const toggleButton = document.getElementById('toggle-nav');
+const filterNav = document.getElementById('filter-list');
+
+toggleButton.addEventListener('click', () => {
+    filterNav.classList.toggle('hidden');
+});

@@ -6,46 +6,59 @@
   <link rel="stylesheet" href="/dist/styles.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div id="container" class="w mx-auto ">
+<body class="bg-gradient-to-br from-[#336699] via-[#49111c] to-[#a9927d] backdrop-blur-2xl  ">
+<main class="flex mx-auto">
+  <div class="container mx-auto ">
+    <div class="flex justify-center items-center min-h-screen  ">
+<div id="container" class=" border-r-white bg-[#2E294E] border-2 border-black min-h-[564px] rounded-lg relative ">
+  <button id="toggle-nav" class="absolute right-0 top-0  z-30  px-3 py-1 text-sm text-white bg-red-800 rounded hover:bg-gray-700">
+    <div class="w-6 h-0.5 bg-black my-1"></div>
+    <div class="w-6 h-0.5 bg-black my-1"></div>
+    <div class="w-6 h-0.5 bg-black my-1"></div>
+  </button>
   <nav id="filter-list" class="flex flex-col flex-wrap">
-    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-filter="all">All</button>
-    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-filter="high">High Priority</button>
-    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-filter="medium">Medium Priority</button>
-    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-filter="low">Low Priority</button>
-    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-filter="overdue">Overdue</button>
+    <button class="max-w-35 filter px-3 py-2 mt-20 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1" data-filter="all">All</button>
+    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1" data-filter="high">High Priority</button>
+    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 0 m-1" data-filter="medium">Medium Priority</button>
+    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1 " data-filter="low">Low Priority</button>
+    <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1" data-filter="overdue">Overdue</button>
   </nav>
 </div>
 
 <div class="container mx-auto">
 <div class="flex justify-center items-center min-h-screen">
 
-<form id="task-form" class="mx-auto w-full max-w-2xl p-6 border-b-blue-950 border-2 rounded-lg shadow-md">
-  <h1 class="text-4xl text-center text-blue-500">My Tasks</h1>
+
+<form id="task-form" class="min-w-3xl shrink-0 w-full max-w-2xl p-6 border-b-blue-950 border-2 rounded-lg shadow-md bg-[#2E294E]">
+  <h1 class="text-4xl text-center text-white pb-5">My Tasks</h1>
 
 
   <label id="task" for="task-input"></label>
-    <input  type="text" id="task-input" placeholder="Enter a task here">
-    <input type="date" id="task-date" placeholder="Enter due date">
-  <label id="priority-label" for="priority-label">Priority</label>
-  <select id="task-priority">
+    <input class="bg-black border-2 border-white text-white mr-2"   type="text" id="task-input" placeholder="Enter a task here">
+  <label for="task-date"></label>
+    <input class=" bg-black border-2 border-white text-white mr-2" type="date" id="task-date" placeholder="Enter due date">
+  <label class="text-white" for="task-priority"></label>
+  <select class="bg-black border-2 border-white text-white mr-2" id="task-priority">
+    <option selected>Choose priority</option>
     <option id="low" value="low">Low</option>
     <option id="medium" value="medium">Medium</option>
     <option id="high" value="high">High</option>
   </select>
-  <button id="add-task" type="submit" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-<span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+  <button id="add-task" type="submit" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-md group bg-gradient-to-br from-blue-500 to-red-700 group-hover:from-purple-600 group-hover:to-blue-500 text-white">
+<span class="relative px-5 py-1 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
 Add Task
 </span>
   </button>
     <div id="task-container">
     </div>
-    <ul id="task-list"></ul>
+  <div class="bg-gradient-to-br from-[#a9927d] to-[#ECFFB0] pt-2">
+    <ul id="task-list" class="max-h-60 min-h-96 overflow-y-auto mt-4 text-white text-center"></ul>
+  </div>
 </form>
 </div>
     </div>
 
-
+</main>
 </body>
 <script src="index.js"></script>
 </html>
