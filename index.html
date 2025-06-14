@@ -10,49 +10,51 @@
 <main class="flex mx-auto">
   <div class="mx-auto ">
     <div class="flex justify-center items-center min-h-screen  ">
-      <div id="container" class=" border-r-white bg-[#2E294E] border-2 border-black min-h-[564px] rounded-lg relative ">
-        <button id="toggle-nav"
-                class="absolute right-0 top-0  z-30  px-3 py-1 text-sm text-white bg-red-800 rounded hover:bg-gray-700">
-          <div class="w-6 h-0.5 bg-black my-1"></div>
-          <div class="w-6 h-0.5 bg-black my-1"></div>
-          <div class="w-6 h-0.5 bg-black my-1"></div>
-        </button>
-        <nav id="filter-list" class="flex flex-col flex-wrap">
-          <button class="max-w-35 filter px-3 py-2 mt-20 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1"
-                  data-filter="all">All
+      <div id="container" class=" border-r-gray-700 bg-[#2E294E] border-2 border-black min-h-[560px] rounded-l-lg relative ">
+
+        <nav id="filter-list" class=" flex-col flex-wrap px-5 hidden md:flex">
+          <p class="mt-20 text-white pl-2">Sort By</p>
+          <button class="min-w-30 filter px-3 py-2  text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none m-1"
+                  data-filter="all">All Tasks
           </button>
-          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1"
+          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none m-1"
                   data-filter="high">High Priority
           </button>
-          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 0 m-1"
+          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none m-1"
                   data-filter="medium">Medium Priority
           </button>
-          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1 "
+          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none m-1 "
                   data-filter="low">Low Priority
           </button>
-          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 m-1"
-                  data-filter="overdue">Overdue
+          <button class="max-w-35 filter px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white border-white border-1 bg-red-950 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none m-1"
+                  data-filter="overdue">Overdue Tasks
           </button>
         </nav>
       </div>
 
       <div class="container mx-auto">
-        <div class="flex items-center min-h-screen">
+        <div class="flex md:items-center md:min-h-screen flex-wrap flex-col md:flex-row">
 
 
           <form id="task-form"
-                class="min-w-3xl shrink-0 w-full max-w-2xl p-6 border-b-blue-950 border-2 rounded-lg shadow-md bg-[#2E294E]">
+                class="md:min-w-3xl md:shrink-0 md:w-full md:max-w-2xl p-6 border-b-black border-2 rounded-r-lg shadow-md bg-[#2E294E] relative">
+            <button id="toggle-nav" type="button"
+                    class="  absolute  left-0 top-0  z-30  px-2 py-1 text-sm text-white bg-white rounded hover:bg-gray-700">
+              <div class="w-6 h-0.5 bg-black my-1"></div>
+              <div class="w-6 h-0.5 bg-black my-1"></div>
+              <div class="w-6 h-0.5 bg-black my-1"></div>
+            </button>
             <h1 class="text-4xl text-center text-white pb-5">My Tasks</h1>
 
 
             <label id="task" for="task-input"></label>
-            <input class="bg-black border-2 border-white text-white mr-2" type="text" id="task-input"
+            <input class="bg-black border-2 border-white text-white mr-4 md:mr-2" type="text" id="task-input"
                    placeholder="Enter a task here">
             <label for="task-date"></label>
-            <input class=" bg-black border-2 border-white text-white mr-2" type="date" id="task-date"
+            <input class=" bg-black border-2 border-white text-white mr-4 md:mr-2" type="date" id="task-date"
                    placeholder="Enter due date">
             <label class="text-white" for="task-priority"></label>
-            <select class="bg-black border-2 border-white text-white mr-2" id="task-priority">
+            <select class="bg-black border-2 border-white text-white mr-4 md:mr-2" id="task-priority">
               <option selected>Choose priority</option>
               <option id="low" value="low">Low</option>
               <option id="medium" value="medium">Medium</option>

@@ -153,4 +153,5 @@ const filterNav = document.getElementById('filter-list');
 
 toggleButton.addEventListener('click', () => {
     filterNav.classList.toggle('hidden');
+    filterNav.classList.toggle("flex");
 });
