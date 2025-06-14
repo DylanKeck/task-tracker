@@ -1,198 +1,51 @@
 @import "tailwindcss";
 
-@keyframes gradient-x {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-}
-
-.animate-gradient-x {
-    animation: gradient-x 12s ease infinite;
-}
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1); /* This flips light to dark */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*body {*/
-/*    background-color: lightgray;*/
-/*}*/
-/*h1 {*/
-/*    font-size: 50px;*/
-/*}*/
-
-
-
-/*#task-list li button {*/
-/*    margin-left: 8px;*/
-/*}*/
-/*li {*/
-/*    list-style-type: none;*/
-/*    font-size: 20px;*/
-/*}*/
-/*label, input {*/
-/*    font-size: 18px;*/
-/*}*/
-/*.past {*/
-/*    color: red;*/
-/*}*/
 .completed {
     text-decoration: line-through;
     color: lightgray;
 }
-/*#container {*/
-/*    text-align: center;*/
-/*    margin: 7rem;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*}*/
-/*.high {*/
-/*    border-left: 6px solid red;*/
-/*}*/
-/*.medium {*/
-/*    border-left: 6px solid yellow;*/
-/*}*/
-/*.low {*/
-/*    border-left: 6px solid green;*/
-/*}*/
-/*#filter-list {*/
-/*    height: 100%;*/
-/*    width: 20em;*/
-/*    padding: 1rem;*/
-/*    background-color: white;*/
-/*}*/
-/*.filter {*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    margin-bottom: 1em;*/
-/*}*/
-/*.items {*/
-/*    padding: 5em;*/
-/*}*/
-/*h1 {*/
-/*    font-size: 50px;*/
-/*}*/
-
-
-
-/*#task-list li button {*/
-/*    margin-left: 8px;*/
-/*}*/
-/*li {*/
-/*    list-style-type: none;*/
-/*    font-size: 20px;*/
-/*}*/
-/*label, input {*/
-/*    font-size: 18px;*/
-/*}*/
-/*.past {*/
-/*    color: red;*/
-/*}*/
-/*.completed {*/
-/*    text-decoration: line-through;*/
-/*    color: lightgray;*/
-/*}*/
-/*#container {*/
-/*    display: flex;*/
-/*    text-align: center;*/
-/*    margin: 7rem;*/
-/*    margin: 7rem auto;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*}*/
 .high {
-    border-left: 6px solid red;
+    border-left: 20px solid red;
+    border-radius: 1em;
+    padding-left: 1em
 }
 .medium {
-    border-left: 6px solid yellow;
+    border-left: 20px solid yellow;
+    border-radius: 1em;
+    padding-left: 1em
 }
+
 .low {
-    border-left: 6px solid green;
+
+    border-left: 20px solid green;
+    border-radius: 1em;
+    padding-left: 1em
 }
-/*#filter-list {*/
-/*    height: 100%;*/
-/*    height: 100vh;*/
-/*    width: 20em;*/
-/*    flex-shrink: 0;*/
-/*    padding: 1rem;*/
-/*    background-color: white;*/
-/*}*/
-/*.filter {*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    margin-bottom: 1em;*/
-/*}*/
-/*.items {*/
-/*    padding: 5em;*/
-/*    flex: 1;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*}*/
-/*#task-list li button {*/
-/*    margin-left: 8px;*/
-/*}*/
-/*li {*/
-/*    list-style-type: none;*/
-/*    font-size: 20px;*/
-/*}*/
-/*label, input {*/
-/*    font-size: 18px;*/
-/*}*/
-/*.past {*/
-/*    color: red;*/
-/*}*/
-/*.completed {*/
-/*    text-decoration: line-through;*/
-/*    color: lightgray;*/
-/*}*/
-/*#container {*/
-/*    text-align: center;*/
-/*    margin: 7rem;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*    !* Ensure children using 100% height span the full viewport *!*/
-/*    min-height: 100vh;*/
-/*}*/
-/*.high {*/
-/*    border-left: 6px solid red;*/
-/*}*/
-/*.medium {*/
-/*    border-left: 6px solid yellow;*/
-/*}*/
-/*.low {*/
-/*    border-left: 6px solid green;*/
-/*}*/
-/*#filter-list {*/
-/*    height: 100%;*/
-/*    !* Occupy the full height of the container *!*/
-/*    min-height: 100vh;*/
-/*    width: 20em;*/
-/*    padding: 1rem;*/
-/*    background-color: white;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*}*/
-/*.filter {*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    margin-bottom: 1em;*/
-/*}*/
-/*.items {*/
-/*    padding: 5em;*/
-/*}*/
+/* Add this to your styles.css file */
+#task-list li {
+    display: flex;
+    justify-content: space-between; /* This pushes items to the ends */
+    align-items: center; /* This vertically centers them */
+    padding: 0.5rem 1rem; /* Add some padding for spacing */
+    margin-bottom: 0.5rem; /* Space between tasks */
+    border-radius: 0.25rem;
+    border: 1px solid lightgray;
+}
+
+#task-list li .task-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows the task text to take up available space */
+    margin-right: 1rem; /* Adds space between the text and the buttons */
+    min-width: 0; /* Allows the flex item to shrink properly */
+    overflow-wrap: break-word
+}
+.task-date {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
